@@ -19,7 +19,8 @@ public class Application {
 		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 		CorsConfiguration config = new CorsConfiguration();
 		config.addAllowedOrigin("http://localhost:3000");
-
+		// Add your deployed Vercel frontend URL
+		config.addAllowedOrigin("https://unifnd-front-g9c4.vercel.app");
 		config.addAllowedMethod("*");
 		config.addAllowedHeader("*");
 		source.registerCorsConfiguration("/**", config);
